@@ -1,19 +1,7 @@
-<?php
-
- include("includes/config.php");
- if(isset($_SESSION['userLoggedIn'])){
- 	$userLoggedIn=$_SESSION['userLoggedIn'];
- }else{
- 	header("Location:register.php");
- }
+<?php 
+include("includes/includedFiles.php"); 
 ?>
-<html>
-<head>
-	<title>Welcome to Slotify!</title>
-</head>
 
-<body>
-	Hello!
-</body>
 
-</html>
+<script>openPage("browse.php")</script>
+

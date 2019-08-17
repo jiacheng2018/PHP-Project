@@ -8,16 +8,23 @@
 			$this->con = $con;
 			$this->errorArray = array();
 		}
-        public function login($un,$pw){
-        	$pw=md5($pw);
-        	$query=mysqli_query($this->con,"SELECT * FROM users WHERE username='$un' AND password='$pw'");
-        	if(mysqli_num_rows($query)==1){
-        		return true;
-        	}else{
-        		array_push($this->errorArray,Constants::$loginFailed);
-        		return false;
-        	}
-        }
+
+		public function login($un, $pw) {
+
+			$pw = md5($pw);
+
+			$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
+
+			if(mysqli_num_rows($query) == 1) {
+				return true;
+			}
+			else {
+				array_push($this->errorArray, Constants::$loginFailed);
+				return false;
+			}
+
+		}
+
 		public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
 			$this->validateUsername($un);
 			$this->validateFirstName($fn);
@@ -47,8 +54,7 @@
 			$profilePic = "assets/images/profile-pics/head_emerald.png";
 			$date = date("Y-m-d");
 
-            echo "INSERT INTO users VALUES ('$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')";
-			$result = mysqli_query($this->con, "INSERT INTO users VALUES ('$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+			$result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
 
 			return $result;
 		}
@@ -59,13 +65,12 @@
 				array_push($this->errorArray, Constants::$usernameCharacters);
 				return;
 			}
-           $checkUserNameQuery=mysqli_query($this->con,"SELECT username FROM users WHERE username='$un'");
-           if(mysqli_num_rows($checkUserNameQuery)!=0){
-           	  array_push($this->errorArray, Constants::$usernameTaken);
-           	  return;
-           }
 
-			//TODO: check if username exists
+			$checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
+			if(mysqli_num_rows($checkUsernameQuery) != 0) {
+				array_push($this->errorArray, Constants::$usernameTaken);
+				return;
+			}
 
 		}
 
@@ -93,13 +98,13 @@
 				array_push($this->errorArray, Constants::$emailInvalid);
 				return;
 			}
-		    $checkUserNameQuery=mysqli_query($this->con,"SELECT email FROM users WHERE email='$em'");
-			if(mysqli_num_rows($checkUserNameQuery)!=0){
-                array_push($this->errorArray,Constants::$emailTaken);
-                return;
+
+			$checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$em'");
+			if(mysqli_num_rows($checkEmailQuery) != 0) {
+				array_push($this->errorArray, Constants::$emailTaken);
+				return;
 			}
 
-			//TODO: Check that username hasn't already been used
 		}
 
 		private function validatePasswords($pw, $pw2) {
