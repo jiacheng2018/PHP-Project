@@ -7,6 +7,8 @@ You can head to https://jiachenggreat.000webhostapp.com/ to see the website
 ### Notice
 For Chrome browser user, the music can jump to the next as the previous song ends, but it cannot play automatically as the newest chrome browser has removed the "Autoplay policy."
 
+### ER Diagram 
+
 Music Player 
 
 ├── README.md
