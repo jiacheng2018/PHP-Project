@@ -8,6 +8,7 @@ You can head to https://jiachenggreat.000webhostapp.com/ to see the website
 For Chrome browser user, the music can jump to the next as the previous song ends, but it cannot play automatically as the newest chrome browser has removed the "Autoplay policy."
 
 ### ER Diagram 
+<img width="715" alt="Screen Shot 2019-09-15 at 5 25 05 PM" src="https://user-images.githubusercontent.com/42711913/64918165-ec142c00-d7dd-11e9-81af-b549bc2a4df2.png">
 
 Music Player 
 
