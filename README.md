@@ -4,3 +4,5 @@ This is project that user can login and get verified with their pwd,username and
 Mainly coded with PHP.Listen to the music. This is project use PHP as backend to retrive data from database and use jQuery to animate object  
 Updating...
 You can head to https://jiachenggreat.000webhostapp.com/ to see the website
+### Notice
+For Chrome browser user, the music can jump to the next as the previous song ends, but it cannot play automatically as the newest chrome browser has removed the "Autoplay policy."
