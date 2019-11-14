@@ -1,5 +1,6 @@
 # Publish-PHP-Project
-PHP Project2
+This project is coded with PHP and jQuery.
+We use mysql as the database
 
 The website be visited through the following link : https://jiachenggreat.000webhostapp.com
 ## ER Diagram
