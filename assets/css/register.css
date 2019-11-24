@@ -1,0 +1,149 @@
+html, 
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#background {
+	background-color: #000;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#loginContainer * {
+	color: #fff;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	box-sizing: border-box;
+    /*display: flex;*/
+}
+
+#loginContainer {
+	width: 80%;
+	margin: 50% auto;
+	position: relative;
+	max-width: 1024px;
+    transform: translate(0,-50%);
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff;
+}
+
+#inputContainer {
+    width: 50%;
+    padding: 3rem;
+    float: left;
+    border-right: 1px solid #999;
+    /*flex: 1;*/
+}
+
+#inputContainer h2 {
+	text-align: center;
+}
+
+#inputContainer input[type="text"],
+#inputContainer input[type="email"],
+#inputContainer input[type="password"] {
+	display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    height: 27px;
+    line-height: 27px;
+    width: 100%;
+}
+
+#inputContainer label {
+	color: #a0a0a0;
+    font-size: 1vw;
+    margin-top: 15px;
+    display: block;
+}
+
+#inputContainer button {
+	background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 250px;
+    color: #fff;
+    display: block;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    height: 41px;
+    width: 40%;
+}
+
+#inputContainer button:hover {
+	cursor: pointer;
+}
+
+.hasAccountText span {
+	font-weight: bold;
+    font-size: .8vw;
+    cursor: pointer;
+}
+
+.hasAccountText {
+	text-align: center;
+}
+
+#registerForm,
+#loginForm {
+	display: none;
+}
+
+#loginText {
+    padding: 45px;
+    display: table-cell;
+   /* flex: 1;*/
+}
+
+#loginText h1 {
+    color: #07d159;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+#loginText h2 {
+    font-size: 2vw;
+    margin: 1vw 0;
+}
+
+#loginText ul {
+    padding: 0;
+}
+
+#loginText li {
+    font-size: 1.1vw;
+    list-style-type: none;
+    padding: 5px 30px;
+    background: url(../images/icons/checkmark.png) no-repeat 0 0;
+}
+
+#inputContainer .errorMessage {
+    color: #07d159;
+    font-size: 1vw;
+    display: block;
+}
